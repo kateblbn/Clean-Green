@@ -15,15 +15,15 @@ function ServiceCard({ service, learnMoreLabel, onOpen }: ServiceCardProps) {
       <img
         src={service.image}
         alt={service.title}
-        className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+        className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] sm:h-64 lg:h-72"
       />
 
-      <div className="flex flex-1 flex-col p-6">
-        <h3 className="font-serif text-3xl text-[#0F2F23] transition-colors duration-300 group-hover:text-[#C6A55C]">
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <h3 className="font-serif text-2xl text-[#0F2F23] transition-colors duration-300 group-hover:text-[#C6A55C] sm:text-[2rem]">
           {service.title}
         </h3>
 
-        <p className="mt-4 text-base leading-7 text-[#5f5b54]">
+        <p className="mt-3 text-sm leading-7 text-[#5f5b54] sm:mt-4 sm:text-base">
           {service.shortDescription}
         </p>
 
@@ -33,7 +33,7 @@ function ServiceCard({ service, learnMoreLabel, onOpen }: ServiceCardProps) {
             e.stopPropagation()
             onOpen()
           }}
-          className="mt-auto pt-6 inline-flex items-center text-sm uppercase cursor-pointer tracking-[0.2em] text-[#C6A55C]"
+          className="mt-auto inline-flex cursor-pointer items-center pt-5 text-xs uppercase tracking-[0.22em] text-[#C6A55C] sm:pt-6 sm:text-sm"
         >
           {learnMoreLabel}
         </button>
